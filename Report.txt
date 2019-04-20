@@ -1,0 +1,7 @@
+Why use MVP?
+
+In Android, we have a problem arising from the fact that Android activities are closely coupled to both UI and data access mechanisms. We can find extreme examples such as CursorAdapter, which mixes adapters, which are part of the view, with cursors, something that should be relegated to the depths of data access layer.
+
+For an application to be easily extensible and maintainable, we need to define well-separated layers. What do we do tomorrow if, instead of retrieving the same data from a database, we need to do it from a web service? We would have to redo our entire view.
+
+MVP makes views independent from our data source. We divide the application into at least three different layers, which lets us test them independently. With MVP we take most of the logic out from the activities so that we can test it without using instrumentation tests.
